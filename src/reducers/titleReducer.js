@@ -1,4 +1,4 @@
-export const initialState = {
+const initialState = {
   title: "Dragon Member List 🐲",
   editing: false
 };
