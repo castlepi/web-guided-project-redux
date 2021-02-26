@@ -4,7 +4,7 @@ import { addMember } from '../actions/dragonListActions';
 
 class DragonList extends React.Component {
   state = {
-    newMember: '',
+    newMember: ''
   };
 
   handleChanges = e => {
