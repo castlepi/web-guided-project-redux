@@ -6,7 +6,6 @@ import { toggleEditing, updateTitle} from './../actions/titleActions';
 
 const Title = () => {
   const [newTitleText, setNewTitleText] = useState();
-  const [state, dispatch] = useReducer(titleReducer, initialState);
 
   const handleChanges = e => {
     setNewTitleText(e.target.value);
@@ -57,7 +56,7 @@ const mapStateToProps = (state) => {
 }
 
 // build dispatching functions that handle state updates as relevant to this component
-const mapDispatchToProps = () => {
+const mapDispatchToProps = (dispatch) => {
   return {
     toggleEditing: () => dispatch(toggleEditing()),
     updateTitle: (newTitle) => dispatch(updateTitle(newTitle))
