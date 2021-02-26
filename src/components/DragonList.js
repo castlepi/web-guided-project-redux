@@ -36,4 +36,6 @@ class DragonList extends React.Component {
   }
 }
 
-export default DragonList;
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(DragonList);
