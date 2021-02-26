@@ -58,8 +58,10 @@ const mapStateToProps = (state) => {
 
 // build dispatching functions that handle state updates as relevant to this component
 const mapDispatchToProps = () => {
-  toggleEditing: () => dispatch(toggleEditing()),
-  updateTitle: (newTitle) => dispatch(updateTitle(newTitle))
+  return {
+    toggleEditing: () => dispatch(toggleEditing()),
+    updateTitle: (newTitle) => dispatch(updateTitle(newTitle))
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Title);
