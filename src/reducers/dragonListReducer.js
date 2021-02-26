@@ -10,6 +10,8 @@ export const dragonListReducer = (state = initialState, action) => {
     case "ADD_MEMBER":
       return {
         ...state
-      }
+      };
+    default:
+      return state;
   }
 }
