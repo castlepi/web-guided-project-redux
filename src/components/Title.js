@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { initialState, titleReducer } from '../reducers/titleReducer';
 import { toggleEditing, updateTitle} from './../actions/titleActions';
 
-const Title = () => {
+const Title = (props) => {
   const [newTitleText, setNewTitleText] = useState();
 
   const handleChanges = e => {
@@ -13,9 +13,9 @@ const Title = () => {
 
   return (
     <div>
-      {!state.editing ? (
+      {!props.editing ? (
         <h1>
-          {state.title}{' '}
+          {props.title}{' '}
           <i
             className="far fa-edit"
             onClick={() => dispatch(toggleEditing())}
