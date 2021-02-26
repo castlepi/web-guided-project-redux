@@ -1,7 +1,5 @@
-import React, { useState, useReducer } from 'react';
+import React, { useState } from 'react';
 import { connect } from "react-redux";
-
-import { initialState, titleReducer } from '../reducers/titleReducer';
 import { toggleEditing, updateTitle} from './../actions/titleActions';
 
 const Title = (props) => {
@@ -50,8 +48,8 @@ const Title = (props) => {
 // Show which values from the state tree should be provided to this component as props
 const mapStateToProps = (state) => {
   return {
-    title: state.title,
-    editing: state.editing
+    title: state.titleReducer.title,
+    editing: state.titleReducer.editing
   };
 }
 
