@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from "redux";
-
+import { Provider } from "react-redux";
 
 import Title from './components/Title';
 import DragonList from './components/DragonList';
 import './styles.css';
+import { titleReducer } from './reducers/titleReducer';
 
-const store = createStore
+// Step 1: create the Redux store
+const store = createStore(titleReducer);
 
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
   );
 }
 
-// Step 1: create the Redux store
+
 
 // Step 2: Provide the store
 
