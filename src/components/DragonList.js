@@ -5,10 +5,6 @@ import { addMember } from '../actions/dragonListActions';
 class DragonList extends React.Component {
   state = {
     newMember: '',
-    members: [
-      { name: 'Jojo Zhang', dragonStatus: true },
-      { name: 'Brandon Harris', dragonStatus: false }
-    ]
   };
 
   handleChanges = e => {
@@ -32,7 +28,7 @@ class DragonList extends React.Component {
           onChange={this.handleChanges}
           placeholder="Add new member"
         />
-        <button>Add member</button>
+        <button onClick={this.props.addMember()}>Add member</button>
       </div>
     );
   }
