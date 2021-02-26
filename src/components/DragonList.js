@@ -15,7 +15,7 @@ class DragonList extends React.Component {
     return (
       <div>
         <div className="friends-list">
-          {this.state.members.map((member, index) => (
+          {this.props.members.map((member, index) => (
             <h4 key={index}>
               {member.name}
               {member.dragonStatus && <i className="fas fa-dragon" />}
@@ -28,7 +28,7 @@ class DragonList extends React.Component {
           onChange={this.handleChanges}
           placeholder="Add new member"
         />
-        <button onClick={this.props.addMember()}>Add member</button>
+        <button onClick={this.props.addMember}>Add member</button>
       </div>
     );
   }
@@ -45,5 +45,8 @@ const mapDispatchToProps = (dispatch) => {
     addMember: (name) => dispatch(addMember(name))
   }
 }
+
+// equivalently, we could use the shortform:
+// const mapDispatchToProps = {addMember}
 
 export default connect(mapStateToProps, mapDispatchToProps)(DragonList);
