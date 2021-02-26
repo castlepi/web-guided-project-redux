@@ -1,4 +1,5 @@
 import React, { useState, useReducer } from 'react';
+import { connect } from "react-redux";
 
 import { initialState, titleReducer } from '../reducers/titleReducer';
 import { toggleEditing, updateTitle} from './../actions/titleActions';
@@ -42,5 +43,9 @@ const Title = () => {
     </div>
   );
 };
+
+// Step 3: connect components to the store, so that they can:
+// * read the state values that are relevant to this compoennt from the store (mapStateToProps)
+// * update state in the store by dispatching actions to the reducer (mapDispatchToProps)
 
 export default Title;
