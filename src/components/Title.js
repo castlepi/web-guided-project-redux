@@ -56,15 +56,15 @@ const mapStateToProps = (state) => {
 }
 
 // build dispatching functions that handle state updates as relevant to this component
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     toggleEditing: () => dispatch(toggleEditing()),
-//     updateTitle: (newTitle) => dispatch(updateTitle(newTitle))
-//   }
-// }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    toggleEditing: () => dispatch(toggleEditing()),
+    updateTitle: (newTitle) => dispatch(updateTitle(newTitle))
+  }
+}
 
-// Shorthand form: we can also say
-const mapDispatchToProps = {toggleEditing, updateTitle}
+// Shorthand form: we can also pass in an object where each key corresponds to an action creator
+// const mapDispatchToProps = {toggleEditing, updateTitle}
 // and the bindActionCreators function (part of react-redux) will automatically convert it into the above longform version
 
 export default connect(mapStateToProps, mapDispatchToProps)(Title);
