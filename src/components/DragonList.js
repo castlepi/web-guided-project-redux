@@ -29,7 +29,8 @@ class DragonList extends React.Component {
           placeholder="Add new member"
         />
         <button onClick={() => {
-          this.props.addMember(this.state.newMember)
+          this.props.addMember(this.state.newMember);
+          this.setState({ newMember: '' });
         }}>Add member</button>
       </div>
     );
