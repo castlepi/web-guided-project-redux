@@ -49,4 +49,4 @@ const mapDispatchToProps = (dispatch) => {
 // equivalently, we could use the shortform:
 // const mapDispatchToProps = {addMember}
 
-export default connect(mapStateToProps, mapDispatchToProps)(DragonList);
+export default connect(mapStateToProps, {addMember})(DragonList);
