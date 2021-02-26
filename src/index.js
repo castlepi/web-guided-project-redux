@@ -9,7 +9,7 @@ import './styles.css';
 import { titleReducer } from './reducers/titleReducer';
 
 // Step 1: create the Redux store
-const store = createStore(titleReducer);
+const store = createStore(rootReducer);
 
 function App() {
   return (
@@ -19,8 +19,6 @@ function App() {
     </div>
   );
 }
-
-
 
 // Step 2: Provide the store
 const rootElement = document.getElementById('root');
