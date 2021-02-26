@@ -25,4 +25,4 @@ function App() {
 // Step 2: Provide the store
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Provider store={store}><App /></Provider>, rootElement);
